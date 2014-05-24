@@ -66,21 +66,48 @@ fullscreen();
     liked: function() {
 
     $(".likeButton").on('mouseenter', function(){
-        $(this).animate({
-          height: 150,
-          width: 150
-        }, 1000 );
-       });
+        $(this).animate({height: 150, width: 150 }, 1000 ); 
+        $(".likeButton").append("<span>Let me know you liked this project</span>");
+      });
+
 
       $(".likeButton").on('mouseleave',function(){
-        $(this).animate({
-          height: 75,
-          width: 75
-        }, 1000 );
+        $(this).animate({height: 75, width: 75}, 1000 );
+        $(".likeButton span").remove();
       });
     }
   };
+
+  var skills = {
+    init:function() {
+      this.showSkills();
+    },
+
+    showSkills: function() {
+      $("#skill1").hide();
+      $("#skill2").hide();
+      $("#skill3").hide();
+      $(window).on("scroll", function(){
+        if($(window).scrollTop() > 450){
+          $("#skill1").slideDown(1000);
+        }
+        if($(window).scrollTop() > 550){
+          $("#skill2").slideDown(1000);
+        }
+        if($(window).scrollTop() > 650){
+          $("#skill3").slideDown(1000);
+        }
+
+      });
+    }
+
+  };
+
+ 
+
   (function() {
+   
+    skills.init();
     likedButton.init();
     sendButton.init();
     stickyHeader.init();

@@ -10,27 +10,25 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <!-- Jquery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <!-- Main.js -->
     <script src="js/main.js"></script>
-    <script src="js/Chart.js"></script>
-    <link rel="stylesheet" href="css/themename/jquery-ui.custom.css" />
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ui.custom.min.js"></script>
-    <!-- Fonts & Icons -->
+        <!-- Fonts & Icons -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   </head>
   <header class="bg">
     <div class="headerWrapper">
-      <h1>Under Construction</h1>
-      <h1>Scroll for a sneak peak</h1>
-      <h1></h1>
+      <div>
+      <h1>Lets Build Something</h1>
+      </div>
     </div>
   </header>
   <body class="bodyWrapper">
     <div class="navWrapper">
       <nav class="navList">
-        <li>Portfolio</li>
+        <a ><li id="portfolio">Portfolio</li></a>
         <li>Insight</li>
         <li>Contact</li>
       </nav>
@@ -47,22 +45,25 @@
     </section>
     <section class="insight">
       <div class="pageSplitter">
+        <div>
+        <h3>Skills</h3>
+        </div>
       <ul>
-        <li>
+        <li id="skill1">
           <i class="fa fa-code fa-5x"></i>
-          <span>HTML5, CSS, JQuery</span>
+          <span>Front-End Development</span>
         </li>
-        <li>
-          <i class="fa fa-cloud fa-5x"></i>
-          <span>Cloud Based</span>
+        <li id="skill2">
+          <i class="fa fa-gamepad fa-5x"></i>
+          <span>UI / UX Design</span>
         </li>
-        <li>
-          <i class="fa fa-credit-card fa-5x"></i>
-          <span>Payment Integraded</span>
+        <li id="skill3">
+          <i class="fa fa-cogs fa-5x"></i>
+          <span>API Integration</span>
         </li>
       </ul>
     </section>
-    <section class="project sherpadesk">
+    <section  class="project sherpadesk">
       <ul class="firstBlock">
       <li>
         <div class="textWrapper">
@@ -125,31 +126,7 @@
 
       </li>
       <li>
-        <canvas id="canvas" height="450" width="450"></canvas>
-  <script>
-    var radarChartData = {
-      labels : ["Bitcoin","Namecoin","Litecoin","peercoin","Feathercoin","Novacoin","dogecoin"],
-      datasets : [
-        {
-          fillColor : "rgba(46, 204, 113,.7)",
-          strokeColor : "rgba(39, 174, 96,1.0)",
-          pointColor : "rgba(220,220,220,1)",
-          pointStrokeColor : "#fff",
-          data : [65,59,90,81,56,55,40]
-        },
-        {
-          fillColor : "rgba(52, 152, 219,.7)",
-          strokeColor : "rgba(41, 128, 185,1.0)",
-          pointColor : "rgba(151,187,205,1)",
-          pointStrokeColor : "#fff",
-          data : [28,48,40,19,96,27,100]
-        }
-      ]
-      
-    }
-
-  var myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 14});
-  </script>
+        <img class="botImg" src="img/imacVec.png">
       </li>
     </ul>
     </section>
@@ -166,7 +143,27 @@
         </li>
       </ul>
     </section>
+    <section class="contact">
+      <ul>
+        <li>
+          <div class="sendButton"><p>Send</p></div>
+        </li>
+        <li>
+          <h2>Name</h2>
+           <input class="nameInput">
+          <h2>Email</h2>
+          <input class="nameInput">
+        </li>
+        <li>
+          <h2 class="textInputLabel">Message</h2>
+          <textarea class="textInput"></textarea>
+        </li>
+      </ul>
+    </section>
   </body>
   <footer>
-
+    <ul>
+      <li>Matthew Bennett</li>
+      <li><i class="fa fa-github fa-3x"></i></li>
+    </ul>
   </footer>

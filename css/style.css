@@ -52,7 +52,9 @@ header {
 .headerWrapper h1 {
   color: #fff;
   margin-top: 223px;
+
 }
+
 
 .textFrontEnd {
   color: black;
@@ -102,6 +104,7 @@ header {
   color: #2c3e50;
   float: left; 
   width: 33.33%; 
+  height: 20px;
   text-align: center;
   line-height: 50px;
 }
@@ -252,7 +255,7 @@ header {
             transition: background-color .5s;
 }
 
-i:hover {
+.likeButton i:hover {
   color: #dadfe1;
 }
 
@@ -463,6 +466,7 @@ i:hover {
   margin-left: 75px;
   float: left;
   list-style-type: none;
+  margin-top: -140px;
 }
 
 .subInfoBitcoin li {
@@ -514,11 +518,126 @@ i:hover {
 }
 
 .botImg {
-  width: 500px;
+  width: 535px;
   height: 450px;
   margin-top: 40px;
+  margin-left: 105px;
 }
 
-.likeText {
+.likeButton span {
   display: block;
+  color: #dadfe1;
+
+}
+
+.pageSplitter div{
+  display: block;
+  width: 33.33%;
+  text-align: center;
+  margin: 30px auto -10px;
+  color: #2c3e50;
+  opacity: .8;
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background: #ccc;
+}
+
+footer ul {
+  list-style-type: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer li:last-child {
+  float: left;
+  width: 50%;
+  text-align: right;
+  line-height: 70px;
+}
+
+footer li {
+  float: left;
+  width: 50%;
+  text-align: left;
+  line-height: 70px;
+  color: #2c3e50;
+}
+.contact {
+  width: 100%;
+  height: 200px;
+  background-color: #2980b9;
+  overflow: auto;
+}
+
+.contact h2 {
+  color: #fff;
+  font-size: 17px;
+  margin-left: -160px;
+}
+
+.contact ul {
+  width: 80%;
+  height: 100%;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact li {
+  width: 25%;
+  margin-top: 20px;
+  float: left;
+  display: block;
+
+}
+
+.contact ul li:nth-child(3){
+  width: 50%;
+}
+.textInput {
+  width: 392px;
+  height: 125px;
+  background-color: #5c97bf;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 17px;
+}
+
+.nameInput {
+  width: 200px;
+  height: 30px;
+  background-color: #5c97bf;
+  color: #fff;
+  font-size: 17px;
+  display: block;
+  border: 1px solid transparent;
+  margin: 0 auto 10px;
+}
+
+.sendButton {
+  margin-top: 20px;
+  width: 225px;
+  height: 50px;
+  border-radius: 30px;
+  border: 3px solid #a4b6c4;
+}
+
+.textInputLabel {
+  color: #fff;
+  font-size: 17px !important;
+  margin-left: -325px !important;
+}
+
+footer i {
+  color: #2c3e50; 
+}
+
+.sendButton p {
+  text-align: center;
+  color: #a4b6c4;
+  line-height: 50px;
 }
