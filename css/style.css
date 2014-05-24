@@ -26,7 +26,7 @@ body, html {
 
 header {
   width: 100%;
-  height: 600px;
+  height: 100%;
   overflow: auto;
 }
 
@@ -40,11 +40,11 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 715px;
+  height: 90%; 
 }
 .headerWrapper {
   width: 95%;
-  height: 600px;
+  height: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -80,13 +80,16 @@ header {
   width: 100%;
   height: 50px;
   background-color: #ccc;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 3;
   -webkit-box-shadow: 0 8px 6px -6px black;
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 5px 6px -6px black;
+}
+
+.headerStick {
+  position: fixed;
 }
 
 .navList {
@@ -109,7 +112,7 @@ header {
 
 .bodyWrapper {
   width: 100%;
-  height: 500px;
+  height: 100%;
   margin: 0 auto;
   background-color: #Ecf0f1;
   overflow:auto;
@@ -242,6 +245,15 @@ header {
  i {
   color: #79B3DA;
   padding: 15px;
+  -webkit-transition: background-color .5s;
+       -moz-transition: background-color .5s;
+        -ms-transition: background-color .5s;
+         -o-transition: background-color .5s;
+            transition: background-color .5s;
+}
+
+i:hover {
+  color: #dadfe1;
 }
 
 .goThere {
@@ -403,6 +415,16 @@ header {
   border-radius: 100px;
   border: 3px solid #a4b6c4;
   margin: -15px auto;
+  -webkit-transition: background-color .5s;
+       -moz-transition: background-color .5s;
+        -ms-transition: background-color .5s;
+         -o-transition: background-color .5s;
+            transition: background-color .5s;
+}
+
+.likeButton:hover {
+  background-color: #79B3DA;
+  border-color: #dadfe1;
 }
 
 .proLootText {
@@ -489,4 +511,14 @@ header {
 
 .sent i {
   color: #fff;
+}
+
+.botImg {
+  width: 500px;
+  height: 450px;
+  margin-top: 40px;
+}
+
+.likeText {
+  display: block;
 }

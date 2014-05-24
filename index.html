@@ -10,9 +10,13 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <!-- Jquery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
     <!-- Main.js -->
     <script src="js/main.js"></script>
     <script src="js/Chart.js"></script>
+    <link rel="stylesheet" href="css/themename/jquery-ui.custom.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.custom.min.js"></script>
     <!-- Fonts & Icons -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   </head>
@@ -78,7 +82,10 @@
           <div class="talkButton"><p>Talk About it</p></div>
         </li>
         <li>
-          <div class="likeButton" id="likeButtonOne"><i class="fa fa-thumbs-o-up fa-3x"></i></div>
+          <div class="likeButton" id="likeButtonOne">
+            <i class="fa fa-thumbs-o-up fa-3x"></i>
+            <span class="likeText"></span>
+          </div>
         </li>
       </ul>
     </section>
@@ -152,7 +159,7 @@
           <h3><strong>Role </strong> Front-End Development, UX/UI Desgin</h3>
         </li>
         <li>
-          <div class="talkButton"><p>Talk About it</p></div>
+          <div class="talkButton" id="talkButton3"><p>Talk About it</p></div>
         </li>
         <li>
           <div class="likeButton"><i class="fa fa-thumbs-o-up fa-3x"></i></div>
