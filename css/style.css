@@ -641,3 +641,11 @@ footer i {
   color: #a4b6c4;
   line-height: 50px;
 }
+
+.liked {
+  background-color: #d91e18;
+}
+
+.liked i {
+  color: #fff !important;
+}

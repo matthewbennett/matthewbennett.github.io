@@ -66,15 +66,21 @@ fullscreen();
     liked: function() {
 
     $(".likeButton").on('mouseenter', function(){
-        $(this).animate({height: 150, width: 150 }, 1000 ); 
+        $(this).animate({height: 150, width: 150 }, 750 ); 
         $(".likeButton").append("<span>Let me know you liked this project</span>");
       });
 
-
-      $(".likeButton").on('mouseleave',function(){
-        $(this).animate({height: 75, width: 75}, 1000 );
+        $(".likeButton").on("click", function(){
+        $(this).addClass("liked");
+        $(this).animate({height: 75, width: 75}, 550);
         $(".likeButton span").remove();
       });
+
+      $(".likeButton").on('mouseleave',function(){
+        $(this).animate({height: 75, width: 75}, 750 );
+        $(".likeButton span").remove();
+      });
+
     }
   };
 
