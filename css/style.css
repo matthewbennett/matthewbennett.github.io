@@ -617,6 +617,7 @@ footer li {
   margin: 0 auto;
   color: #fff;
   font-size: 17px;
+  border-radius: 14px;
 }
 
 .nameInput {
@@ -628,6 +629,7 @@ footer li {
   display: block;
   border: 1px solid transparent;
   margin: 0 auto 10px;
+  border-radius: 14px;
 }
 
 .sendButton {
