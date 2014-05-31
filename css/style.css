@@ -35,7 +35,7 @@ header {
 ======================*/
 
 .bg { 
-  background: url(lamp.jpg) no-repeat center center fixed; 
+  background: url(bg1.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -52,6 +52,7 @@ header {
 .headerWrapper h1 {
   color: #fff;
   margin-top: 223px;
+  text-align: center;
 
 }
 
@@ -74,6 +75,17 @@ header {
   -webkit-transform: skew(4deg,6deg);
 }
 
+.headerWrapper div {
+  margin: 100px auto;
+  display: block;
+  width: 25%;
+}
+
+.headerWrapper h3 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
 /*=====================
       Navigation
 ======================*/

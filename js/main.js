@@ -27,7 +27,7 @@ fullscreen();
     send: function() {
       $(".talkButton").on('mouseenter', function(){
         $(this).addClass("sent");
-        $('.talkButton p').remove();
+        $('.talkButton p').empty();
         $(this).prepend('<i class="fa fa-paper-plane fa-2x"></i>');
        });
 
@@ -66,18 +66,18 @@ fullscreen();
     liked: function() {
 
     $(".likeButton").on('mouseenter', function(){
-        $(this).animate({height: 150, width: 150 }, 750 ); 
+        $(this).animate({height: 150, width: 150 }, 350 ); 
         $(".likeButton").append("<span>Let me know you liked this project</span>");
       });
 
         $(".likeButton").on("click", function(){
         $(this).addClass("liked");
-        $(this).animate({height: 75, width: 75}, 550);
+        $(this).animate({height: 75, width: 75}, 350);
         $(".likeButton span").remove();
       });
 
       $(".likeButton").on('mouseleave',function(){
-        $(this).animate({height: 75, width: 75}, 750 );
+        $(this).animate({height: 75, width: 75}, 350 );
         $(".likeButton span").remove();
       });
 
