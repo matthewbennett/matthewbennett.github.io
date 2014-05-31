@@ -206,11 +206,12 @@ header {
 }
 
 .firstBlock p {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .firstBlock strong {
   font-weight: 400;
+  font-size: 28px;
 }
 
 .textWrapper {
