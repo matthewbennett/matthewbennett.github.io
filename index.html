@@ -6,6 +6,11 @@
     <title>Matthew Bennett</title>
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Media query for tablets -->
+    <link rel="stylesheet" href="css/mobile.css" />
+
+    <!-- Media query for tablets -->
+    <link rel="stylesheet" href="css/mobile.css" />
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <!-- Jquery -->
@@ -32,7 +37,7 @@
       <nav class="navList">
         <a ><li id="portfolio">Portfolio</li></a>
         <li>Insight</li>
-        <li>Contact</li>
+        <a href="mailto:mbennett24@student.gsu.edu"><li>Contact</li></a>
       </nav>
     </div>
     <section class="aboutMe">
@@ -99,7 +104,7 @@
     <section class="project proLoot">
       <ul class="firstBlock">
       <li>
-        <img src="img/proLoot2.png">
+        <img class="scale" src="img/proLoot2.png">
       </li>
       <li>
         <div class="textWrapper">
@@ -154,17 +159,17 @@
     <section class="contact">
       <ul>
         <li>
-          <div class="sendButton"><p>Send</p></div>
+         <a href="" class="sender"><div class="sendButton"><p>Send</p></div></a>
         </li>
         <li>
           <h2>Name</h2>
-           <input class="nameInput">
+           <input class="nameInput" id="name">
           <h2>Email</h2>
-          <input class="nameInput">
+          <input class="nameInput" id="email">
         </li>
         <li>
-          <h2 class="textInputLabel">Message</h2>
-          <textarea class="textInput"></textarea>
+          <h2 class="textInputLabel">message</h2>
+          <textarea id="message" class="textInput"></textarea>
         </li>
       </ul>
     </section>

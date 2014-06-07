@@ -109,10 +109,21 @@ fullscreen();
 
   };
 
+  var mailME = {
+    init:function(){
+      this.mail();
+    },
+
+    mail:function(){
+      var subject = $("#name").val();
+      var message = $("#message").val();
+      $(".sender").attr('href', 'mailto:mbennett24@student.gsu.edu?subject='+subject+'&body='+message);
+    }
+  };
  
 
   (function() {
-   
+    mailME.init();
     skills.init();
     likedButton.init();
     sendButton.init();
