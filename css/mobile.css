@@ -57,6 +57,9 @@ header {
 
 }
 
+.shift {
+  margin-left: 0px;
+}
 
 .textFrontEnd {
   color: black;
