@@ -12,122 +12,279 @@ function fullscreen() {
  
 fullscreen();
 
- $('span.logreg.log').one('click', function () {
+var setBanner = {
+  init:function(){
+    this.bannerSize();
+    this.setFooter();
+  },
 
-                // insert html
-                $('div.registration-part').append('<p>Login</p>');
-            });
-  
+  setFooter:function() {
+    var top = $(document).height();
+    //alert(top);
+    $("#foot").css("top",top - 40);
+  },
 
-  var sendButton = {
-    init: function() {
-      this.send();
-    },
+  bannerSize:function() {
+    var viewportHeight = $(window).height();
+    var stick = viewportHeight -65;
+    $(".banner").css("height",viewportHeight);
+    $(".navList").css("top",stick);
+  }
+};
 
-    send: function() {
-      $(".talkButton").on('mouseenter', function(){
-        $(this).addClass("sent");
-        $('.talkButton p').empty();
-        $(this).prepend('<i class="fa fa-paper-plane fa-2x"></i>');
-       });
-
-      $(".talkButton").on('mouseleave',function(){
-        $(".talkButton").removeClass("sent");
-        $('.talkButton i').remove();
-        $('.talkButton').prepend('<p>Talk About It</p>');
-      });
-    }
-  };
-
-  var stickyHeader = {
+var stickyHeader = {
     init:function() {
       this.stick();
     },
 
     stick: function() {
       $(window).scroll(function(){
+      var viewportHeight = $(window).height();
+      var stick = viewportHeight -65;
       var top =  $(this).scrollTop();
-      var height = $(this).height() - 70;
+      var height = $(this).height() - 60;
       height = (height / 100) * 100;
       if(top > height) {
-        $(".navWrapper").addClass("headerStick");
+        $(".navList").addClass("headerStick");
+        $(".navList").css("top",0);
+        $(".bannerOnly").addClass("blackOut");
       } else {
-        $(".navWrapper").removeClass("headerStick");
+        $(".navList").removeClass("headerStick");
+        $(".bannerOnly").removeClass("blackOut");
+        $(".navList").css("top",stick);
       }
       });
     }
   };
 
-  var likedButton = {
+
+
+  var showInfo = {
     init:function() {
-      this.liked();
+      this.info();
     },
 
-    liked: function() {
-
-    $(".likeButton").on('mouseenter', function(){
-        $(this).animate({height: 150, width: 150 }, 350 ); 
-        $(".likeButton").append("<span>Let me know you liked this project</span>");
+    info:function() {
+      $(".infoLi").mouseenter(function(){
+        var block = $(this).attr("data-id");
+        if(block == 0) { $(".aboutInfo0").show();}
+        if(block == 1) { $(".aboutInfo1").show();}
+        if(block == 2) { $(".aboutInfo2").show();}
       });
-
-        $(".likeButton").on("click", function(){
-        $(this).addClass("liked");
-        $(this).animate({height: 75, width: 75}, 350);
-        $(".likeButton span").remove();
+      $(".infoLi").mouseleave(function(){
+        $(".aboutInfo0").fadeOut("fast");
+        $(".aboutInfo1").fadeOut("fast");
+        $(".aboutInfo2").fadeOut("fast");
       });
-
-      $(".likeButton").on('mouseleave',function(){
-        $(this).animate({height: 75, width: 75}, 350 );
-        $(".likeButton span").remove();
-      });
-
     }
   };
 
-  var skills = {
+  var tabs = {
     init:function() {
-      this.showSkills();
+      this.switchTabs();
     },
 
-    showSkills: function() {
-      $("#skill1").hide();
-      $("#skill2").hide();
-      $("#skill3").hide();
-      $(window).on("scroll", function(){
-        if($(window).scrollTop() > 450){
-          $("#skill1").slideDown(1000);
-        }
-        if($(window).scrollTop() > 550){
-          $("#skill2").slideDown(1000);
-        }
-        if($(window).scrollTop() > 650){
-          $("#skill3").slideDown(1000);
-        }
+    switchTabs:function() {
+      var activeTab = $("#overviewTab");
+      $("#overviewTab").addClass("activeTab");
+      $(".campaignProfile").hide();
+      $(".campaignComments").hide();
+      $(".campaignUpdates").hide();
 
+      $("#profileTab").click(function(){
+        $(activeTab).removeClass("activeTab");
+        activeTab = $("#profileTab");
+        $("#profileTab").addClass("activeTab");
+        $(".campaignSummary").hide();
+        $(".campaignComments").hide();
+        $(".campaignUpdates").hide();
+        $(".campaignBanner").hide();
+        $(".campaignProfile").fadeIn("fast");
+      });
+
+      $("#overviewTab").click(function(){
+        $(activeTab).removeClass("activeTab");
+        activeTab = $("#overviewTab");
+        $("#overviewTab").addClass("activeTab");
+        $(".campaignBanner").fadeIn("fast");
+        $(".campaignSummary").fadeIn("fast");
+        $(".campaignComments").hide();
+        $(".campaignUpdates").hide();
+        $(".campaignProfile").hide();
+      });
+
+      $("#commentsTab").click(function(){
+        $(activeTab).removeClass("activeTab");
+        activeTab = $("#commentsTab");
+        $("#commentsTab").addClass("activeTab");
+        $(".campaignBanner").hide();
+        $(".campaignSummary").hide();
+        $(".campaignComments").fadeIn("fast");
+        $(".campaignUpdates").hide();
+        $(".campaignProfile").hide();
+      });
+
+      $("#updatesTab").click(function(){
+        $(activeTab).removeClass("activeTab");
+        activeTab = $("#updatesTab");
+        $("#updatesTab").addClass("activeTab");
+        $(".campaignBanner").hide();
+        $(".campaignSummary").hide();
+        $(".campaignComments").hide();
+        $(".campaignUpdates").fadeIn("fast");
+        $(".campaignProfile").hide();
       });
     }
-
   };
 
-  var mailME = {
+  var postComment = {
+    init:function() {
+      this.post();
+    },
+
+    post:function(){
+      $(".postButton").click(function(){
+        var text = $(".commentsInput").val();
+        var insert = "<div class='comment'><img src='img/face2.jpg'><h4>Shaun Manic</h4><h5>Just Now</h5><p>"+text+"</p></div>";
+        $(insert).appendTo(".commentsContainer").hide().slideDown();
+        $(".commentsInput").val("");
+      });
+    }
+  };
+
+  var slider = {
     init:function(){
-      this.mail();
+      this.slide();
     },
 
-    mail:function(){
-      var subject = $("#name").val();
-      var message = $("#message").val();
-      $(".sender").attr('href', 'mailto:mbennett24@student.gsu.edu?subject='+subject+'&body='+message);
+    slide:function(){
+      var numberOfSlides = 3;
+      var currentSlide = 1;
+      var nextSlide = 2;
+      var lastSlide = 3;
+      //set arrow position 
+      $("#right").css("left",$(window).width() - 40);
+      //set slide width
+      $(".slide img").css("width",$(window).width());
+      //show first slide 
+      $("#slide"+currentSlide).show();
+      //switch slide auto 
+      setInterval(
+          function() 
+          {
+            $("#right").trigger("click");
+
+          }, 3000);
+      //on right arrow click 
+      $("#right").click(function(){
+        $("#slide"+nextSlide).css("left","-1500px");
+        $("#slide"+nextSlide).show();
+        $("#slide"+currentSlide).animate({
+            "left":"1500px",
+          }, 500);
+        $("#slide"+nextSlide).animate({
+            "left":"0px",
+          }, 500);
+        setTimeout(
+          function() 
+          {
+            $("#slide"+currentSlide).hide();
+            //update variables 
+            lastSlide = currentSlide;
+            currentSlide = nextSlide;
+            nextSlide = nextSlide+1;
+            if(nextSlide > numberOfSlides) {
+              nextSlide = 1;
+            }
+          }, 501);
+      });
+      //on left arrow click 
+      $("#left").click(function(){
+        $("#slide"+lastSlide).show();
+        $("#slide"+lastSlide).css("left","1500px");
+        $("#slide"+currentSlide).animate({
+            "left":"-1500px",
+          }, 500);
+        $("#slide"+lastSlide).animate({
+            "left":"0px",
+          }, 500);
+        setTimeout(
+          function() 
+          {
+            nextSlide = currentSlide;
+            currentSlide = lastSlide;
+            lastSlide = lastSlide -1;
+            if(lastSlide < 1) {
+              lastSlide = numberOfSlides;
+            }
+
+          }, 501);
+      });
+    }
+
+  };
+
+  var gallery = {
+    init:function() {
+      this.switchPic();
+    },
+
+    switchPic:function() {
+      $(".thumbPic").click(function(){
+        var src = $(this).attr('src');
+        $("#mainDisplay").fadeOut();
+        setTimeout(
+          function() 
+          {
+           $("#mainDisplay").attr('src',src);
+           $("#mainDisplay").fadeIn();
+          }, 400);
+      });
     }
   };
+
+var BannerTitle = {
+  init:function() {
+    this.citySwitch();
+  },
+
+
+
+  citySwitch:function(){
+    var counter = 0;
+    setInterval(
+          function() 
+          {
+            var cities = ["Atlanta","Savannah","Athens"];
+            $("#city").fadeOut("slow");
+            var insert = '<span id="city">'+cities[counter]+'</span>';
+            counter++;
+            if(counter > 2){counter =0;}
+            setTimeout(
+              function() 
+              {
+
+                $("#city").remove();
+                $(insert).appendTo(".bannerTitle");
+                $("#city").fadeIn("slow");
+
+              }, 400);
+
+          }, 3000);
+  }
+};
+
  
 
   (function() {
-    mailME.init();
-    skills.init();
-    likedButton.init();
-    sendButton.init();
+    BannerTitle.init();
+    setBanner.init();
     stickyHeader.init();
+    showInfo.init();
+    tabs.init();
+    postComment.init();
+    slider.init();
+    gallery.init();
 
   }()); 
 

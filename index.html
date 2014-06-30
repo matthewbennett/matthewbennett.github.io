@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Matthew Bennett</title>
+    <title>SparkMarket</title>
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Media query for tablets -->
-    <link rel="stylesheet" href="css/mobile.css" />
+
 
     <!-- Media query for tablets -->
     <link rel="stylesheet" href="css/mobile.css" />
@@ -15,168 +14,163 @@
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <!-- Jquery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Jquery UI -->
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <!-- Main.js -->
     <script src="js/main.js"></script>
+    <script src="js/unslider.min.js"></script>
+    
         <!-- Fonts & Icons -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- shapeHover -->
   </head>
-  <header class="bg">
-    <div class="headerWrapper">
-      <div>
-      <h1>Lets Build Something</h1>
-      <h3>Matt Bennett | Web Developer</h3>
-      <h4></h4>
-      </div>
-    </div>
+  <header>
+
   </header>
-  <body class="bodyWrapper">
-    <div class="navWrapper">
-      <nav class="navList">
-        <a ><li id="portfolio">Portfolio</li></a>
-        <li>Insight</li>
-        <a href="mailto:mbennett24@student.gsu.edu"><li>Contact</li></a>
-      </nav>
-    </div>
-    <section class="aboutMe">
-      <ul class="aboutMeText">
-        <li>
-         <p><strong>HI</strong>, Im Matthew a web developer based out of Atlanta, some of my work includes landing pages, web based & mobile applications. Driven by passion and curiosity, each new project is another chance to do something that has never been done! </p>
-        </li>
-        <li>
-          <img src="img/me.jpg">
-        </li>
-      </ul>
-    </section>
-    <section class="insight">
-      <div class="pageSplitter">
-        <div>
-        <h3>Skills</h3>
+  <body>
+    <section class="banner" >
+        <h1 class="bannerTitle">Dream Big <span id="city">Georgia</span></h1>
+        <div class="navList">
+            <ul>
+                <li>SparkMarket</li>
+                <li>Sign up | Login</li>
+            </ul>
         </div>
-      <ul>
-        <li id="skill1">
-          <i class="fa fa-code fa-5x"></i>
-          <span>Front-End Development</span>
-        </li>
-        <li id="skill2">
-          <i class="fa fa-gamepad fa-5x"></i>
-          <span>UI / UX Design</span>
-        </li>
-        <li id="skill3">
-          <i class="fa fa-cogs fa-5x"></i>
-          <span>API Integration</span>
-        </li>
-      </ul>
     </section>
-    <section  class="project sherpadesk">
-      <ul class="firstBlock">
-      <li>
-        <div class="textWrapper">
-        <p><strong>SherpaDesk Mobile</strong> is the mobile verison of SherpaDesk's customer service & support solution that tracks time and creates Invoices.</p>
+    <section class="funded">
+        <ul class="about">
+            <li data-id="0" class="infoLi">
+                <div class="howItWorks">
+                    <img class="icon" src="img/bulb.png">
+                    </div>
+                    <h1>Concept</h1>
+                    <p class="hideInfo aboutInfo0">For the first time in almost 100 years, everyday investors can invest in businesses before they go public. Previously only available to the wealthy.</p>
+                </div>
+            </li>
+            <li data-id="1" class="infoLi">
+                <div class="howItWorks">
+                    <img class="icon" src="img/doc.png">
+                    </div>
+                    <h1>Plan</h1>
+                    <p class="hideInfo aboutInfo1">Small businesses create 2 out of every 3 jobs but banks make it hard for them to obtain loans. With SparkMarket you can directly invest in local business and realize a profit.</p>
+                </div>
+            </li>
+            <li data-id="2" class="infoLi">
+                <div class="howItWorks">
+                    <img class="icon" src="img/check.png">
+                    </div>
+                    <h1>Equity</h1>
+                    <p class="hideInfo aboutInfo2">Empowered by some of the best guardiansin the financial services industry, SparkMarket has both the tools and personnel to protect your sensitive information</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="past">
+        <div class="sliderContainer">
+            <i id="left" class="fa fa-angle-left fa-4x"></i> 
+            <i id="right" class="fa fa-angle-right fa-4x"></i> 
+            <div id="slide1" class="slide">
+                <img src="img/slide1.jpg">
+                <h1>Funding Made Easy</h1>
+                <div class="getStarted">Get Started</div>
+            </div>
+            <div id="slide2" class="slide"><img src="img/slide2.jpg"></div>
+            <div id="slide3" class="slide"><img src="img/slide3.jpg"></div>
         </div>
+    </section>
+    <section class="projectBanner">
+        <h1 class="projectsHeader">Projects</h1>
+    </section>
+    <section class="projects">
+       <ul class="projectList">
+        <a href="campaign.html">
+         <li>
+            <div class="projectBlock">
+                
+                <img class="projectPicture" src="img/proj2.jpg">
+                <h3>Joe Coffee</h3>
+                <h5>Coffee mug that lets you brew on the GO!</h5>
+                <div class="location">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Athens, Georgia</p>
+                </div>
+            </div>
+         </li> 
+         <li>
+            <div class="projectBlock">
+                
+                <img class="projectPicture" src="img/proj3.jpg">
+                <h3>Super Tool</h3>
+                <h5>A tool for everything</h5>
+                <div class="location">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Atlanta, Georgia</p>
+                </div>
+            </div>
+         </li>
+         <li>
+            <div class="projectBlock">
+                
+                <img class="projectPicture" src="img/proj1.jpg">
+                <h3>Smart buds</h3>
+                <h5>Coffee mug that lets you brew on the GO!</h5>
+                <div class="location">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Alpharetta, Georgia</p>
+                </div>
+            </div>
+         </li>
+           <li>
+            <div class="projectBlock">
+                
+                <img class="projectPicture" src="img/proj2.jpg">
+                <h3>Joe Coffee</h3>
+                <h5>Coffee mug that lets you brew on the GO!</h5>
+                <div class="location">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Athens, Georgia</p>
+                </div>
+            </div>
+         </li> 
+         <li>
+            <div class="projectBlock">
+                
+                <img class="projectPicture" src="img/proj3.jpg">
+                <h3>Super Tool</h3>
+                <h5>A tool for everything</h5>
+                <div class="location">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Atlanta, Georgia</p>
+                </div>
+            </div>
+         </li>   
+         </a>
+       </ul>
+    </section>
 
-      </li>
-      <li>
-        <img class="topImg shift" src="img/page1.png">
-      </li>
-    </ul>
-    <ul class="subInfo">
-        <li class="projectRole">
-          <h3><strong>Role </strong> Front-End Development, UX/UI Desgin</h3>
-        </li>
-        <li>
-          <a href="mailto:mbennett24@student.gsu.edu">
-          <div class="talkButton" id="talkButton3"><p>Talk About it</p></div>
-          </a>
-        </li>
-        <li>
-          <div class="likeButton" id="likeButtonOne">
-            <i class="fa fa-thumbs-o-up fa-3x"></i>
-            <span class="likeText"></span>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section class="projectInfo">
-    </section>
-    <section class="project proLoot">
-      <ul class="firstBlock">
-      <li>
-        <img class="scale" src="img/proLoot2.png">
-      </li>
-      <li>
-        <div class="textWrapper">
-        <p class="proLootText"><strong>Pro Loot</strong> is a Social Ecommerce widget, that can be easly embeded into Social platforms such as Facebook, tumblr, & Blogger</p>
-        </div>
-      </li>
-    </ul>
-    </section>
-    <section class="projectInfo">
-      <ul class="subInfoProLoot">
-        <li class="projectRole">
-          <h3><strong>Role </strong> Front-End Development, UX/UI Desgin</h3>
-        </li>
-        <li>
-          <a href="mailto:mbennett24@student.gsu.edu">
-          <div class="talkButton" id="talkButton3"><p>Talk About it</p></div>
-          </a>
-        </li>
-        <li>
-          <div class="likeButton"><i class="fa fa-thumbs-o-up fa-3x"></i></div>
-        </li>
-      </ul>
-    </section>
-    <section class="project bitCoin">
-      <ul class="firstBlock">
-      <li>
-        <div class="textWrapper">
-        <p><strong>S.I.M.B.A.</strong> a high frequency trading software capable of trading cyrpto currencies on one of the most popular crypto exchanges, designed to run on cloud based servers</p>
-        </div>
-
-      </li>
-      <li>
-        <img class="botImg" src="img/imacVec.png">
-      </li>
-    </ul>
-    </section>
-    <section class="projectInfo">
-      <ul class="subInfoBitcoin">
-        <li class="projectRole">
-          <h3><strong>Role </strong> Front-End Development, UX/UI Desgin</h3>
-        </li>
-        <li>
-          <a href="mailto:mbennett24@student.gsu.edu">
-          <div class="talkButton" id="talkButton3"><p>Talk About it</p></div>
-          </a>
-        </li>
-        <li>
-          <div class="likeButton"><i class="fa fa-thumbs-o-up fa-3x"></i></div>
-        </li>
-      </ul>
-    </section>
-    <section class="contact">
-      <ul>
-        <li>
-         <a href="" class="sender"><div class="sendButton"><p>Send</p></div></a>
-        </li>
-        <li>
-          <h2>Name</h2>
-           <input class="nameInput" id="name">
-          <h2>Email</h2>
-          <input class="nameInput" id="email">
-        </li>
-        <li>
-          <h2 class="textInputLabel">message</h2>
-          <textarea id="message" class="textInput"></textarea>
-        </li>
-      </ul>
-    </section>
   </body>
   <footer>
-    <ul>
-      <li>Matthew Bennett</li>
-      <a href="https://github.com/matthewbennett"><li><i class="fa fa-github fa-3x"></i></li></a>
+    <h1>LET'S MAKE IT HAPPEN</h1>
+    <h3>Enter your email adress and we'll contact you</h3>
+    <textarea class="textInput" type="text" placeholder="Email Address"></textarea>
+    <ul class="submit">
+        <li>
+            <div class="checkArea">
+                <div class="checkBox"></div><span>Learn about investing</span>
+            </div>
+            <div class="checkArea">
+                <div class="checkBox"></div><span>Seeking Funding</span>
+            </div>
+        </li>
+        <li>
+            <div class="contactButton">CONTACT ME</div>
+        </li>
     </ul>
+        <ul id="foot" class="footerInfo">
+            <li>Terms of Use</li>
+            <li>Privacy Policy</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+            <li>Investment Risks</li>
+            <li>Meet the Team</li>
+        </ul>
   </footer>
+  </html>
