@@ -174,7 +174,7 @@ var stickyHeader = {
           {
             $("#right").trigger("click");
 
-          }, 3000);
+          }, 10000);
       //on right arrow click 
       $("#right").click(function(){
         $("#slide"+nextSlide).css("left","-1500px");
