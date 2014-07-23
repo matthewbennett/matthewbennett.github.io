@@ -28,7 +28,7 @@ fullscreen();
       $(".talkButton").on('mouseenter', function(){
         $(this).addClass("sent");
         $('.talkButton p').empty();
-        $(this).prepend('<i class="fa fa-paper-plane fa-2x"></i>');
+        $(this).prepend('<i class="fa fa-desktop fa-2x"></i>');
        });
 
       $(".talkButton").on('mouseleave',function(){
@@ -100,7 +100,7 @@ fullscreen();
         if($(window).scrollTop() > 550){
           $("#skill2").slideDown(1000);
         }
-        if($(window).scrollTop() > 650){
+        if($(window).scrollTop() > 600){
           $("#skill3").slideDown(1000);
         }
 
@@ -120,9 +120,26 @@ fullscreen();
       $(".sender").attr('href', 'mailto:mbennett24@student.gsu.edu?subject='+subject+'&body='+message);
     }
   };
+
+  var goTo = {
+    init:function() {
+      this.goHere();
+    },
+
+    goHere:function() {
+      $("#go").click(function(){
+        $('html,body').animate({scrollTop: $("#portfolio").offset().top});
+      });
+      $("#in").click(function(){
+        $('html,body').animate({scrollTop: $("#insight").offset().top});
+      });
+    
+    }
+  };
  
 
   (function() {
+    goTo.init();
     mailME.init();
     skills.init();
     likedButton.init();

@@ -54,7 +54,7 @@ header {
   color: #fff;
   margin-top: 223px;
   text-align: center;
-  font-size: 50px !important;
+  font-size: 70px !important;
 
 }
 
@@ -80,7 +80,7 @@ header {
 .headerWrapper div {
   margin: 100px auto;
   display: block;
-  width: 50%;
+  width: 80%;
 }
 
 .headerWrapper h3 {
@@ -95,7 +95,7 @@ header {
 .navWrapper {
   width: 100%;
   height: 50px;
-  background-color: #ccc;
+  background-color: rgba(231, 228, 228, 0.87);
   top: 0;
   width: 100%;
   z-index: 3;
@@ -362,6 +362,14 @@ header {
   background-size: cover;
 }
 
+.spark { 
+  background: url(../img/sparkBG1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .proLoot { 
   background: url(proLootBG.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -557,7 +565,8 @@ header {
 footer {
   width: 100%;
   height: 70px;
-  background: #ccc;
+  background: rgba(231, 228, 228, 0.87);
+  overflow: auto;
 }
 
 footer ul {
@@ -665,5 +674,11 @@ footer i {
 
 .liked i {
   color: #fff !important;
+}
+
+.siteImage {
+  width: 650px;
+margin-left: -103px;
+margin-top: 25px;
 }
 
