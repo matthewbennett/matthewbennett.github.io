@@ -34,7 +34,7 @@ fullscreen();
       $(".talkButton").on('mouseleave',function(){
         $(".talkButton").removeClass("sent");
         $('.talkButton i').remove();
-        $('.talkButton').prepend('<p>Talk About It</p>');
+        $('.talkButton').prepend('<p>Take me There</p>');
       });
     }
   };
