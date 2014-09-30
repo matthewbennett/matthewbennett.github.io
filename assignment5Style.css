@@ -1,0 +1,116 @@
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+.form {
+  width: 600px;
+  height: 900px;
+  border: 1px solid #000;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-left: 20px;
+  overflow: auto;
+}
+ h1 {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.description {
+  text-align: center;
+  margin-top: 10px;
+}
+
+body {
+  width: 90%;
+  overflow: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.sectionLabel {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.mainData {
+  list-style-type: none;
+}
+
+.mainData li {
+  width: 100%;
+  height: 40px;
+}
+
+.mainData p {
+  float: left;
+  margin-right: 5px;
+  width: 50px;
+}
+
+.mainData input {
+  width: 220px;
+  padding-left: 5px;
+}
+
+.descriptionInput {
+  width: 500px;
+  height: 80px;
+  resize:none;
+  margin-bottom: 10px;
+}
+
+.buttonGroup {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.size {
+  width: 30px;
+  margin-left: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.bottomButtons {
+  list-style-type: none;
+  width: 400px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.bottomButtons li {
+  float: left;
+  width: 50%;
+}
+
+.bottomButtons div {
+  width: 180px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #000;
+}
+
